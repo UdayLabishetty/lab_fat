@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     // Stage 1: Checkout code from Git
-                    checkout scm
+                    checkout scm: [$class: 'GitSCM', branches: [[name: '*/main']]]
                 }
             }
         }
@@ -33,7 +33,7 @@ pipeline {
             steps {
                 script {
                     // Stage 4: Push Docker image to repository
-                    sh 'docker push 20mic0116fat'
+                    sh 'docker push your-docker-registry/20mic0116fat'
                 }
             }
         }
