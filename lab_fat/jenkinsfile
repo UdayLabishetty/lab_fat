@@ -24,7 +24,7 @@ pipeline {
             steps {
                 script {
                     // Stage 3: Build Docker image
-                    sh 'docker build -t your-image-name .'
+                    sh 'docker build -t 20mic0116fat .'
                 }
             }
         }
@@ -33,7 +33,7 @@ pipeline {
             steps {
                 script {
                     // Stage 4: Push Docker image to repository
-                    sh 'docker push your-image-name'
+                    sh 'docker push 20mic0116fat'
                 }
             }
         }
